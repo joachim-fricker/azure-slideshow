@@ -1,0 +1,5 @@
+Due to the fact that without being an LG Partner one cannot access data stored on an USB drive (webosvintage library needed) the next 
+approach for doing so is to provide a webapp for doing so. I have choosen azure as provider for the following reasons:
+o) free hosting
+o) lot of options
+o) helps in my job
