@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- 
+Please note that the whole program is currently only intended to run on the TV which I own. So i have hardcoded the screen dimensions.
+However i expect that this will be fine for all modern LG TV's. Lets see whether i will get some feedback when I ever will finish this.
+ 
+ -->
+<style type="text/css">
+body {
+	background-color: #eaeaea;
+	font-family: Futura, Open Sans, Raleway, sans-serif;
+	white-space: nowrap;
+}
+
+.frame {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 30px;
+	border: 15px solid #efefef;
+	background-color: #eaeaea;
+	position: relative;
+	box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .3), 1px 1px 2px
+		rgba(0, 0, 0, .2), 40px 35px 70px -10px rgba(0, 0, 0, .5), -20px -20px
+		100px -10px rgba(255, 255, 255, .8);
+}
+
+.frame img {
+	box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+}
+
+.frame.red {
+	border: 15px solid #a52f2f;
+	box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .3), 1px 1px 2px
+		rgba(0, 0, 0, .2), 40px 35px 70px -10px rgba(0, 0, 0, .5), -20px -20px
+		100px -10px rgba(165, 47, 47, .3);
+}
+
+.frame.black {
+	border: 15px solid #333;
+	box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .3), 1px 1px 2px
+		rgba(0, 0, 0, .2), 40px 35px 70px -10px rgba(0, 0, 0, .5), -20px -20px
+		100px -10px rgba(51, 51, 51, .2);
+}
+
+.frame.gold {
+	border: 15px solid rgb(155, 95, 5);
+	box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .3), 1px 1px 2px
+		rgba(0, 0, 0, .2), 40px 35px 70px -10px rgba(0, 0, 0, .5), -20px -20px
+		100px -10px rgba(51, 51, 51, .2);
+}
+
+.text-block {
+	position: absolute;
+	bottom: 100px;
+	text-align: center;
+	background-color: #FFFAFA;
+	opacity: 0.6;
+	color:black;
+	padding-left: 30px;
+	padding-right: 30px;
+	left: 200px;
+	font-size: 20px;
+	
+}
+</style>
+<script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script src="js/frontend.js" charset="utf-8"></script>
+
+
+</head>
+<body>
+
+
+	<figure class="black  frame">
+	
+		<img id="image" src="images/testImages/test0.jpg" width="1740" height="940" />
+		<div class="text-block">
+			<p>We now have a place holder for adding comments to a picture</p>
+		</div>
+	</figure>
+
+</body>
+</html>
