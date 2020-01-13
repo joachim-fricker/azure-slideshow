@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/11f3e506-b650-4e1d-a3fc-7043a8c2eb04/resourceGroups/de.jfricker/providers/Microsoft.Web/sites/jfricker-slideshow",
+    "appService.deploySubpath": ""
+}
