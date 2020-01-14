@@ -19,16 +19,16 @@ function showImage() {
 	var image = document.getElementById('image');
 	image.src = album + "/" + images[current].img;
 
-	if (current == 2 || current == 3) {
-		$(".text-block").hide();
-	
-	} else {
+	if (images[current].caption) {
+		$("#caption").text(images[current].caption);
 		var w = $(".text-block").width();
 		console.log("Width of text is", w);
 		$(".text-block").css("left", (1740 - w) / 2);
 		$(".text-block").show();
-
+	} else {
+		$(".text-block").hide();	
 	}
+	
 
 }
 function doPrevious() {
