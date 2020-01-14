@@ -67,16 +67,30 @@ body {
 }
 </style>
 <script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
-<script src="js/frontend.js" charset="utf-8"></script>
+<script src="js/slide.js" charset="utf-8"></script>
 
 
 </head>
 <body>
 
+<script>
+
+	let searchParams = new URLSearchParams(window.location.search)
+	let albumParam = searchParams.get('album')
+	console.log("Album is=",albumParam); 
+	jQuery.getScript( albumParam+ "/show.js", function() { 
+  		 console.log("Album is loaded=",images);
+		
+	});
+    $( document ).ready(function() {
+        initImages(albumParam,images);
+    });
+ 
+    </script>
 
 	<figure class="black  frame">
 	
-		<img id="image" src="images/testImages/test0.jpg" width="1740" height="940" />
+		<img id="image" src="" width="1740" height="940" />
 		<div class="text-block">
 			<p>We now have a place holder for adding comments to a picture</p>
 		</div>

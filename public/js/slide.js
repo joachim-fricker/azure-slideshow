@@ -1,16 +1,24 @@
-var images = ["test0.jpg", "test1.jpg", "test2.jpg", "test3.jpg", "test4.jpg",
-	"test5.jpg"];
+
 var current = 0;
 var LEFT = 37;
 var RIGHT = 39;
 var UP = 38;
 var DOWN = 40;
 
+var images = [];
+var album = "";
+
+
+function initImages(theAlbum, theImages) {
+	album = theAlbum;
+	images = theImages;
+	showImage();
+}
+
 function showImage() {
 	var image = document.getElementById('image');
-	image.src = "images/testImages/" + images[current];
+	image.src = album + "/" + images[current].img;
 
-	callDirList();
 	if (current == 2 || current == 3) {
 		$(".text-block").hide();
 	

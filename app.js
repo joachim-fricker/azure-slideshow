@@ -17,6 +17,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// add our data folder - if this works i have to check how i can make this configurable
+app.use(express.static(path.join(__dirname, '../../data')));
 
 
 app.get('/', function(req, res) {
@@ -24,8 +26,10 @@ app.get('/', function(req, res) {
 });
 
 
+// for the slideshow the request will then look like slideShow?album=09-10_Chile
+
 app.get('/slideShow', function(req, res) {
-	console.log("value of foo is:", req.query.foo);
+	console.log("the album to show is:", req.query.album);
     res.sendFile('slideShow.html', { root: path.join(__dirname, 'public') });
 });
 
