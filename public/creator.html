@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/jqtree.css">
+
+	<style>
+		body {
+			background-color: #eaeaea;
+			font-family: Futura, Open Sans, Raleway, sans-serif;
+			white-space: nowrap;
+		}
+	</style>
+	<script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="js/tree.jquery.js" charset="utf-8"></script>
+
+	<script>
+		$(document).ready(function () {
+			$('#tree1').tree();
+			
+			$('#tree1').on(
+				'tree.select',
+				function (event) {
+					
+					if (event.node) {
+						// node was selected
+						var node = event.node;
+						alert(node.name);
+					}
+					else {
+						// event.node is null
+						// a node was deselected
+						// e.previous_node contains the deselected node
+					}
+				});
+				
+				});
+
+	</script>
+</head>
+
+<body>
+
+
+	Here we will implement the slide show creator:
+
+	<div id="tree1" data-url="/getFolders"></div>
+
+</body>
+
+</html>
